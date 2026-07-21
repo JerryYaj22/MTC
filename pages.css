@@ -228,17 +228,79 @@ HERO
 ===========================*/
 
 .hero {
-    background:
-        url("mw-background.png") right center / 100% no-repeat,
-        linear-gradient(to right, #020611, #000, #140028);
-
+    background: linear-gradient(to right, #020611, #000, #140028);
     color: white;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 80px 8%;
+
+    padding: clamp(40px, 8vw, 80px) clamp(20px, 8vw, 120px);
+
     overflow: hidden;
-    min-height: 1150px;
+    position: relative;
+
+    min-height: clamp(650px, 100vh, 1150px);
+}
+
+/* Background image */
+.hero-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.hero-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+/* Keep hero content above image */
+.hero > *:not(.hero-img) {
+    position: relative;
+    z-index: 1;
+}
+
+
+/* Tablets */
+@media (max-width: 1024px) {
+    .hero {
+        min-height: 800px;
+        padding: 60px 5%;
+    }
+
+    .hero-img img {
+        object-position: center;
+    }
+}
+
+
+@media (max-width: 600px) {
+    .hero {
+        background-image: url("mw-background-mobile.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+
+    .hero-img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .hero-img img {
+        width: 100%;
+        height: auto;
+        max-height: 100%;
+        object-fit: contain;
+    }
 }
 
 .hero-content2{
@@ -294,13 +356,30 @@ HERO
 
 }
 
+.hero2 .hero-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.hero2 .hero-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* shows the whole image */
+}
+
 .hero2 {
     background:
         linear-gradient(to right, #020611, #000, #140028);
     display: flex;
     text-align: center;
-    
-    
+
+    min-height: 600px; /* shrink container */
+    height: auto;
+    padding: 40px 8%;
+    overflow: hidden;
+    position: relative;
 }
 
 .hero-content2 h2{
@@ -776,207 +855,245 @@ input{
 
 }
 
-/*==========================
-TABLET
-===========================*/
 
-@media(max-width:1200px){
 
-.category-grid{
-
-grid-template-columns:repeat(3,1fr);
-
-}
-
-.features{
-
-grid-template-columns:repeat(2,1fr);
-
-}
-
-.hero{
-
-flex-direction:column;
-
-text-align:center;
-
-}
-
-.hero-content{
-
-width:100%;
-
-margin-bottom:50px;
-
-}
-
-.hero-image{
-
-width:100%;
-
-justify-content:center;
-
-}
-
-header{
-
-flex-wrap:wrap;
-
-gap:25px;
-
-}
-
-nav ul{
-
-gap:25px;
-
-}
-
-}
-
-/*==========================
-MOBILE
-===========================*/
-
-@media(max-width:768px){
+/* ---------- Phones ---------- */
+@media (max-width:768px){
 
 .announcement-bar{
 
-display:none;
+    display:none;
 
 }
 
 header{
 
-flex-direction:column;
-
-padding:20px;
+    flex-direction:column;
+    padding:20px;
 
 }
 
 .logo img{
 
-width:180px;
+    width:180px;
 
 }
 
 nav ul{
 
-flex-direction:column;
-
-gap:18px;
-
-margin-top:20px;
+    flex-direction:row;
+    gap:18px;
+    margin-top:20px;
 
 }
 
 .nav-icons{
 
-margin-top:20px;
+    margin-top:20px;
 
 }
 
-.hero{
+@media (max-width:768px){
 
-padding:60px 25px;
+    .hero {
+        padding: 40px 20px;
+        min-height: 500px;
+        height: auto;
+    }
+
+    .hero-img {
+        height: 100%;
+    }
+
+    .hero-img img {
+        object-fit: contain;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero2 {
+        min-height: 450px;
+        padding: 30px 5%;
+    }
+
+    .hero2 .hero-img img {
+        object-fit: contain;
+    }
+}
+
+.hero-content{
+
+    width:100%;
 
 }
 
 .hero-content h1{
 
-font-size:3rem;
+    font-size:2.8rem;
 
 }
 
 .hero-content h2{
 
-font-size:1.7rem;
+    font-size:1.6rem;
 
 }
 
 .hero-content p{
 
-font-size:1rem;
+    font-size:1rem;
+
+}
+
+.hero-image{
+
+    width:100%;
+    display:flex;
+    justify-content:center;
+
+}
+
+.hero-image img{
+
+    width:95%;
+    max-width:420px;
+    height:auto;
 
 }
 
 .btn{
 
-padding:16px 34px;
+    width:100%;
+    max-width:320px;
 
 }
 
 .features{
 
-grid-template-columns:1fr;
+    grid-template-row:1fr;
 
 }
 
 .feature{
 
-justify-content:center;
-
-text-align:center;
-
-flex-direction:column;
+    flex-direction:column;
+    text-align:center;
+    align-items:center;
 
 }
 
 .category-grid{
 
-grid-template-columns:1fr;
+    grid-template-columns:1fr;
 
 }
 
 .footer-container{
 
-grid-template-columns:1fr;
-
-text-align:center;
+    grid-template-columns:1fr;
+    text-align:center;
 
 }
 
 .footer-social{
 
-justify-content:center;
+    justify-content:center;
 
 }
 
 }
 
-/*==========================
-SMALL PHONES
-===========================*/
+/* ---------- Small Phones ---------- */
+@media (max-width:480px){
 
-@media(max-width:480px){
+.hero{
+
+    padding:50px 15px;
+
+}
 
 .hero-content h1{
 
-font-size:2.4rem;
+    font-size:2.2rem;
 
 }
 
 .hero-content h2{
 
-font-size:1.4rem;
+    font-size:1.3rem;
+
+}
+
+.hero-content p{
+
+    font-size:.95rem;
+
+}
+
+.hero-image img{
+
+    width:100%;
+    max-width:300px;
+
+}
+
+.btn{
+
+    width:100%;
+    padding:15px;
 
 }
 
 .categories h2{
 
-font-size:2rem;
+    font-size:2rem;
 
 }
 
 .card{
 
-padding:20px;
+    padding:20px;
 
 }
 
 .card img{
 
-height:140px;
+    height:140px;
+
+}
+
+}
+
+/* ---------- Tiny Phones ---------- */
+@media (max-width:320px){
+
+.hero-content h1{
+
+    font-size:1.8rem;
+
+}
+
+.hero-content h2{
+
+    font-size:1.1rem;
+
+}
+
+.hero-content p{
+
+    font-size:.9rem;
+
+}
+
+.hero-image img{
+
+    max-width:250px;
+
+}
+
+.logo img{
+
+    width:130px;
 
 }
 
