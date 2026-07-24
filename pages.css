@@ -1,3 +1,4 @@
+/* START OF INDEX PAGE */
 /*==========================
 RESET
 ===========================*/
@@ -94,1007 +95,595 @@ NAVIGATION
 ===========================*/
 
 nav ul{
-
     display:flex;
     gap:40px;
-
     align-items:center;
 }
 
 nav a{
-
     font-size:1rem;
     font-weight:600;
-
     transition:.3s;
-
     position:relative;
 }
 
 nav a:hover{
-
     color:#9b5dff;
-
 }
 
 nav a.active{
-
     color:white;
-
 }
 
 nav a.active::after{
-
     content:"";
-
     position:absolute;
-
     left:0;
-
     bottom:-8px;
-
     width:100%;
-
     height:3px;
-
     background:#9b5dff;
-
     border-radius:50px;
-
 }
 
 nav li{
-
     position:relative;
-
 }
 
 nav li i{
-
     margin-left:6px;
-
     font-size:.8rem;
-
 }
 
 /*==========================
 NAV ICONS
 ===========================*/
-
 .nav-icons{
-
     display:flex;
-
     align-items:center;
-
     gap:25px;
-
 }
 
 .nav-icons i{
-
     font-size:1.4rem;
-
     cursor:pointer;
-
     transition:.3s;
-
 }
 
 .nav-icons i:hover{
-
     color:#8f5cff;
-
 }
 
 .cart{
-
     position:relative;
-
 }
 
 .cart span{
-
     position:absolute;
-
     top:-10px;
-
     right:-10px;
-
     width:20px;
-
     height:20px;
-
     border-radius:50%;
-
     background:#8f5cff;
-
     color:white;
-
     display:flex;
-
     justify-content:center;
-
     align-items:center;
-
     font-size:.75rem;
-
     font-weight:bold;
-
 }
 
 /*==========================
 HERO
 ===========================*/
-
 .hero {
-    background: linear-gradient(to right, #020611, #000, #140028);
-    color: white;
+    min-height: 700px;
+    background-image: url("midwest_toy_background_extended.png");
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+}
 
+.hero-text {
+    background:linear-gradient(
+        to right,
+        rgba(2, 6, 17, 0.493),
+        rgba(0, 0, 0, 0.534),
+        rgba(20, 0, 40, 0.479)
+    );
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    padding: clamp(40px, 8vw, 80px) clamp(20px, 8vw, 120px);
-
-    overflow: hidden;
-    position: relative;
-
-    min-height: clamp(650px, 100vh, 1150px);
+    text-align: center;
+    margin: auto;
+    padding-top: 250px;
 }
 
-/* Background image */
-.hero-img {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 0;
-}
-
-.hero-img img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    display: block;
-}
-
-/* Keep hero content above image */
-.hero > *:not(.hero-img) {
-    position: relative;
-    z-index: 1;
-}
-
-
-/* Tablets */
-@media (max-width: 1024px) {
-    .hero {
-        min-height: 800px;
-        padding: 60px 5%;
-    }
-
-    .hero-img img {
-        object-position: center;
-    }
-}
-
-
-@media (max-width: 600px) {
-    .hero {
-        background-image: url("mw-background-mobile.png");
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;
-    }
-
-
-    .hero-img {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .hero-img img {
-        width: 100%;
-        height: auto;
-        max-height: 100%;
-        object-fit: contain;
-    }
-}
-
-.hero-content2{
-
+.hero-content{
     max-width: 1400px;
     margin: 0 auto;
     padding: 120px 50px;
     opacity: 1;
     transform: translateY(30px);
     transition: opacity 0.7s ease, transform 0.7s ease;
-
 }
 
 .hero-content h2{
-
-    font-size:2.4rem;
-
     text-transform:uppercase;
-
     line-height:1.2;
-
     margin-bottom:10px;
-
     font-weight:900;
-
+    color: white;
 }
 
 .hero-content h1{
-
     font-size:5rem;
-
     text-transform:uppercase;
-
     color:#3ca6ff;
-
     line-height:1;
-
     margin-bottom:25px;
-
     font-weight:900;
-
 }
 
 .hero-content p{
-
     font-size:1.2rem;
-
-    color:#ddd;
-
+    color:white;
     line-height:1.8;
-
     margin-bottom:40px;
-
-}
-
-.hero2 .hero-img {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-}
-
-.hero2 .hero-img img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain; /* shows the whole image */
-}
-
-.hero2 {
-    background:
-        linear-gradient(to right, #020611, #000, #140028);
-    display: flex;
-    text-align: center;
-
-    min-height: 600px; /* shrink container */
-    height: auto;
-    padding: 40px 8%;
-    overflow: hidden;
-    position: relative;
-}
-
-.hero-content2 h2{
-
-    font-size:2.4rem;
-
-    text-transform:uppercase;
-
-    line-height:1.2;
-
-    margin-bottom:10px;
-
-    font-weight:900;
-
-}
-
-.hero-content2 h1{
-
-    font-size:5rem;
-
-    text-transform:uppercase;
-
-    color:#3ca6ff;
-
-    line-height:1;
-
-    margin-bottom:25px;
-
-    font-weight:900;
-
-}
-
-.hero-content2 p{
-
-    font-size:1.2rem;
-
-    color:#ddd;
-
-    line-height:1.8;
-
-    margin-bottom:40px;
-
 }
 
 /*==========================
 BUTTON
 ===========================*/
-
 .btn{
+    display: inline-block;
+    padding: 18px 42px;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #7c3aed, #a855f7);
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    left: 50%;
+    margin-top: auto;
+    box-shadow:
+        0 12px 25px rgba(124, 58, 237, 0.4),
+        0 0 20px rgba(168, 85, 247, 0.35);
 
-    display:inline-block;
-
-    padding:18px 42px;
-
-    border-radius:10px;
-
-    background:linear-gradient(90deg,#7c3aed,#a855f7);
-
-    color:white;
-
-    font-weight:bold;
-
-    transition:.35s;
-
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    transition: all 0.35s ease;
+    animation: glow 2s infinite ease-in-out;
+}
+@keyframes glow {
+    0%{
+        box-shadow:
+            0 12px 25px rgba(124, 58, 237, 0.4),
+            0 0 15px rgba(168, 85, 247, 0.3);
+    }
+    50%{
+        box-shadow:
+            0 16px 35px rgba(124, 58, 237, 0.6),
+            0 0 30px rgba(168, 85, 247, 0.6);
+    }
+    100%{
+        box-shadow:
+            0 12px 25px rgba(124, 58, 237, 0.4),
+            0 0 15px rgba(168, 85, 247, 0.3);
+    }
 }
 
 .btn:hover{
-
-    transform:translateY(-4px);
-
-    box-shadow:0 10px 30px rgba(138,43,226,.45);
-
-}
-
-/*==========================
-HERO IMAGE
-===========================*/
-
-.hero-image{
-
-    width:52%;
-
-    display:flex;
-
-    justify-content:flex-end;
-
-}
-
-.hero-image img{
-
-    width:100%;
-
-    max-width:720px;
-
+    box-shadow:
+        0 18px 40px rgba(124, 58, 237, 0.6),
+        0 0 35px rgba(168, 85, 247, 0.5);
+    cursor: pointer;
 }
 
 /*==========================
 FEATURE SECTION
 ===========================*/
-
 .features{
-
     background:#09090d;
-
     color:white;
-
     display:grid;
-
     grid-template-columns:repeat(5,1fr);
-
     gap:30px;
-
     padding:30px 8%;
-
 }
 
 .feature{
-
     display:flex;
-
     align-items:flex-start;
-
     gap:18px;
-
 }
 
 .feature i{
-
     font-size:2.2rem;
-
     color:#8f5cff;
-
 }
 
 .feature h3{
-
     font-size:1rem;
-
     margin-bottom:8px;
-
     text-transform:uppercase;
-
 }
 
 .feature p{
-
     color:#ccc;
-
     font-size:.9rem;
-
     line-height:1.6;
-
 }
 /*==========================
 SHOP BY CATEGORY
 ===========================*/
 
 .categories{
-
     padding:80px 8%;
-
     background:#ffffff;
-
 }
 
 .categories h2{
-
     text-align:center;
-
     font-size:2.5rem;
-
     margin-bottom:50px;
-
     text-transform:uppercase;
-
     font-weight:800;
-
     color:#111;
-
 }
 
 .category-grid{
-
     display:grid;
-
     grid-template-columns:repeat(6,1fr);
-
     gap:25px;
-
 }
 
 .card{
-
     background:#fff;
-
     border:1px solid #e8e8e8;
-
     border-radius:14px;
-
     padding:25px;
-
     text-align:center;
-
     transition:.35s;
-
     cursor:pointer;
-
 }
 
 .card:hover{
-
     transform:translateY(-10px);
-
     box-shadow:0 15px 40px rgba(0,0,0,.15);
-
 }
 
 .card img{
-
     height:170px;
-
     width:100%;
-
     object-fit:contain;
-
     margin-bottom:20px;
-
 }
 
 .card h3{
-
     font-size:1.05rem;
-
     margin-bottom:18px;
-
     text-transform:uppercase;
-
 }
 
 .card a{
-
     color:#7c3aed;
-
     font-weight:bold;
-
 }
 
 .card a i{
-
     margin-left:8px;
-
     transition:.3s;
-
 }
 
 .card:hover a i{
-
     transform:translateX(6px);
-
 }
 
 /*==========================
 DROPDOWN MENU
 ===========================*/
-
 nav ul li{
-
     position:relative;
-
 }
-
 nav ul li ul{
-
     position:absolute;
-
     top:45px;
-
     left:0;
-
     width:230px;
-
     background:#111;
-
-    border-radius:10px;
-
+    border-radius:10px
     overflow:hidden;
-
     opacity:0;
-
     visibility:hidden;
-
     transition:.3s;
-
     display:flex;
-
     flex-direction:column;
-
     z-index:100;
-
 }
 
 nav ul li:hover ul{
-
     opacity:1;
-
     visibility:visible;
-
 }
 
 nav ul li ul li{
-
     width:100%;
-
 }
 
 nav ul li ul li a{
-
     display:block;
-
     padding:15px 20px;
-
     font-weight:500;
-
 }
 
 nav ul li ul li a:hover{
-
     background:#7c3aed;
-
     color:white;
-
 }
 
 /*==========================
 FOOTER
 ===========================*/
-
 footer{
-
     background:#050505;
-
     color:white;
-
     padding:60px 8%;
-
 }
 
 .footer-container{
-
     display:grid;
-
     grid-template-columns:repeat(4,1fr);
-
     gap:40px;
-
 }
 
 .footer-column h3{
-
     margin-bottom:20px;
-
     font-size:1.3rem;
-
 }
 
 .footer-column p{
-
     color:#bdbdbd;
-
     line-height:1.8;
-
     margin-bottom:15px;
-
 }
 
 .footer-column ul{
-
     display:flex;
-
     flex-direction:column;
-
     gap:12px;
-
 }
 
 .footer-column li{
-
     color:#cfcfcf;
-
     transition:.3s;
-
 }
 
 .footer-column li:hover{
-
     color:#8f5cff;
-
     padding-left:8px;
-
 }
 
 .footer-social{
-
     display:flex;
-
     gap:15px;
-
     margin-top:20px;
-
 }
 
 .footer-social a{
-
     width:42px;
-
     height:42px;
-
     border-radius:50%;
-
     background:#171717;
-
     display:flex;
-
     justify-content:center;
-
     align-items:center;
-
     transition:.3s;
-
 }
 
 .footer-social a:hover{
-
     background:#7c3aed;
-
 }
 
 .footer-bottom{
-
     margin-top:50px;
-
     padding-top:25px;
-
     border-top:1px solid #262626;
-
     text-align:center;
-
     color:#aaa;
-
 }
 
 /*==========================
 UTILITY
 ===========================*/
-
 section{
-
     width:100%;
-
 }
 
 button{
-
     cursor:pointer;
-
     border:none;
-
 }
-
 input{
-
     outline:none;
-
 }
 
-
-
-/* ---------- Phones ---------- */
+/*=========================================
+TABLETS & PHONES
+=========================================*/
 @media (max-width:768px){
 
-.announcement-bar{
-
-    display:none;
-
-}
-
-header{
-
-    flex-direction:column;
-    padding:20px;
-
-}
-
-.logo img{
-
-    width:180px;
-
-}
-
-nav ul{
-
-    flex-direction:row;
-    gap:18px;
-    margin-top:20px;
-
-}
-
-.nav-icons{
-
-    margin-top:20px;
-
-}
-
-@media (max-width:768px){
-
-    .hero {
-        padding: 40px 20px;
-        min-height: 500px;
-        height: auto;
+    .announcement-bar{
+        display:none;
     }
 
-    .hero-img {
-        height: 100%;
+    header{
+        flex-direction:column;
+        padding:20px;
     }
 
-    .hero-img img {
-        object-fit: contain;
-    }
-}
-
-@media (max-width: 768px) {
-    .hero2 {
-        min-height: 450px;
-        padding: 30px 5%;
+    .logo img{
+        width:180px;
     }
 
-    .hero2 .hero-img img {
-        object-fit: contain;
+    nav ul{
+        flex-direction:row;
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:18px;
+        margin-top:20px;
     }
-}
 
-.hero-content{
+    .nav-icons{
+        margin-top:20px;
+    }
 
-    width:100%;
+    /* HERO */
 
-}
+    .hero{
+        min-height:550px;
+        width:100%;
 
-.hero-content h1{
+        background-image:url("midwest_toy_background_extended.png");
+        background-repeat:no-repeat;
+        background-position:center center;
+        background-size:cover;
+    }
 
-    font-size:2.8rem;
+    .hero-text{
+        min-height:550px;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        text-align:center;
+        padding:80px 30px;
+    }
 
-}
+    .hero-content{
+        width:100%;
+        max-width:700px;
+        padding:0;
+    }
 
-.hero-content h2{
+    .hero-content h1{
+        font-size:3rem;
+    }
 
-    font-size:1.6rem;
+    .hero-content h2{
+        font-size:1.6rem;
+    }
 
-}
+    .hero-content p{
+        font-size:1rem;
+    }
 
-.hero-content p{
+    .btn{
+        width:100%;
+        max-width:320px;
+    }
 
-    font-size:1rem;
+    /* FEATURES */
 
-}
+    .features{
+        grid-template-columns:1fr;
+    }
 
-.hero-image{
+    .feature{
+        flex-direction:column;
+        text-align:center;
+        align-items:center;
+    }
 
-    width:100%;
-    display:flex;
-    justify-content:center;
+    /* CATEGORIES */
 
-}
+    .category-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
 
-.hero-image img{
+    /* FOOTER */
 
-    width:95%;
-    max-width:420px;
-    height:auto;
+    .footer-container{
+        grid-template-columns:1fr;
+        text-align:center;
+    }
 
-}
-
-.btn{
-
-    width:100%;
-    max-width:320px;
-
-}
-
-.features{
-
-    grid-template-row:1fr;
-
-}
-
-.feature{
-
-    flex-direction:column;
-    text-align:center;
-    align-items:center;
-
-}
-
-.category-grid{
-
-    grid-template-columns:1fr;
-
-}
-
-.footer-container{
-
-    grid-template-columns:1fr;
-    text-align:center;
-
-}
-
-.footer-social{
-
-    justify-content:center;
+    .footer-social{
+        justify-content:center;
+    }
 
 }
 
-}
-
-/* ---------- Small Phones ---------- */
+/*=========================================
+SMALL PHONES
+=========================================*/
 @media (max-width:480px){
 
-.hero{
+    .hero{
+        min-height:450px;
+        background-size:cover;
+        background-position:center center;
+    }
 
-    padding:50px 15px;
+    .hero{
+        min-height:450px;
+        padding:60px 20px;
+    }
 
-}
+    .hero-content h1{
+        font-size:2.3rem;
+    }
 
-.hero-content h1{
+    .hero-content h2{
+        font-size:1.3rem;
+    }
 
-    font-size:2.2rem;
+    .hero-content p{
+        font-size:.95rem;
+    }
 
-}
+    .btn{
+        width:100%;
+        padding:15px;
+    }
 
-.hero-content h2{
+    .categories h2{
+        font-size:2rem;
+    }
 
-    font-size:1.3rem;
+    .category-grid{
+        grid-template-columns:1fr;
+    }
 
-}
+    .card{
+        padding:20px;
+    }
 
-.hero-content p{
-
-    font-size:.95rem;
-
-}
-
-.hero-image img{
-
-    width:100%;
-    max-width:300px;
-
-}
-
-.btn{
-
-    width:100%;
-    padding:15px;
-
-}
-
-.categories h2{
-
-    font-size:2rem;
-
-}
-
-.card{
-
-    padding:20px;
+    .card img{
+        height:140px;
+    }
 
 }
 
-.card img{
-
-    height:140px;
-
-}
-
-}
-
-/* ---------- Tiny Phones ---------- */
+/*=========================================
+TINY PHONES
+=========================================*/
 @media (max-width:320px){
 
-.hero-content h1{
+    .logo img{
+        width:130px;
+    }
 
-    font-size:1.8rem;
+    .hero{
+        min-height:400px;
+    }
 
+    .hero-content h1{
+        font-size:1.8rem;
+    }
+
+    .hero-content h2{
+        font-size:1.1rem;
+    }
+
+    .hero-content p{
+        font-size:.9rem;
+    }
 }
-
-.hero-content h2{
-
-    font-size:1.1rem;
-
-}
-
-.hero-content p{
-
-    font-size:.9rem;
-
-}
-
-.hero-image img{
-
-    max-width:250px;
-
-}
-
-.logo img{
-
-    width:130px;
-
-}
-
-}
+/* END OF INDEX PAGE */
