@@ -1514,18 +1514,78 @@ nav li i{
 }
 
 @media(max-width:768px){
-.faq-hero h1{
-    font-size:34px;
+    body{
+        overflow-x:hidden;
+    }
+    .faq-hero{
+        width:100%;
+        min-height:260px;
+        padding:40px 15px;
+        margin:0;
+    }
+    .faq-hero h1{
+        font-size:34px;
+        margin-bottom:12px;
+    }
+    .faq-hero p{
+        width:100%;
+        max-width:100%;
+        font-size:15px;
+        padding:0 10px;
+    }
+    .faq-container{
+        width:100%;
+        max-width:100%;
+        margin:35px 0;
+        padding:0 15px;
+        gap:25px;
+    }
+    .faq-box{
+        width:100%;
+        padding:25px 18px;
+        margin:0;
+        border-radius:15px;
+    }
+    .faq-box h2{
+        font-size:24px;
+    }
+    .faq-item{
+        padding:18px 0;
+    }
+    .faq-item h3{
+        font-size:18px;
+        line-height:1.4;
+    }
+    .faq-item p{
+        font-size:15px;
+        line-height:1.7;
+    }
 }
-.faq-container{
-    width:92%;
-}
-.faq-box{
-    padding:25px 20px;
-}
-.faq-item h3{
-    font-size:18px;
-}
+
+/* SMALL PHONES */
+@media(max-width:480px){
+    .faq-hero{
+        padding:35px 10px;
+    }
+    .faq-hero h1{
+        font-size:28px;
+    }
+    .faq-container{
+        padding:0 10px;
+        margin:25px 0;
+    }
+    .faq-box{
+        padding:20px 15px;
+    }
+    .faq-box h2{
+        font-size:21px;
+    }
+    .faq-item h3{
+        font-size:16px;
+    }
+    .faq-item p{
+        font-size:14px;
+    }
 }
 /* ====================================
         END OF MW-FAQ PAGE
