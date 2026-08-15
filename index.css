@@ -1073,7 +1073,7 @@ nav li i{
     min-height: 550px;
     background:
         linear-gradient(rgba(11,16,32,.85), rgba(11,16,32,.95)),
-        url("mw-tcg-hero.png");
+        url("tcgcardcollection.jpg");
     background-size: cover;
     background-position: center;
     display: flex;
@@ -1251,7 +1251,7 @@ nav li i{
     min-height: 550px;
     background:
         linear-gradient(rgba(11,16,32,.85), rgba(11,16,32,.95)),
-        url("mw-toy-hero.png");
+        url("toyscollectibles.jpg");
     background-size: cover;
     background-position: center;
     display: flex;
@@ -2387,7 +2387,7 @@ nav li i{
             rgba(5,10,25,.88),
             rgba(10,15,35,.65)
         ),
-        url("upcoming-event-img.png");
+        url("upcoming-event-img.jpg");
     background-size:cover;
     background-position:center;
     display:flex;
@@ -2723,7 +2723,7 @@ nav li i{
 ==================================== */
 
 /* ====================================
-        START OF MW-EVENT-DETAILS PAGE
+        START OF MW-EVENT-TOURNAMENT PAGE
 ==================================== */
 .event-details-hero{
     background:
@@ -2732,7 +2732,7 @@ nav li i{
             rgba(11,16,32,.92),
             rgba(11,16,32,.72)
         ),
-        url("mw-herologo.png");
+        url("event-tournament-img.png");
     background-size:cover;
     background-position:center;
     min-height:420px;
@@ -3082,7 +3082,7 @@ nav li i{
     }
 }
 /* ====================================
-        END OF MW-EVENT-DETAIL PAGE
+        END OF MW-EVENT-TOURNAMENT PAGE
 ==================================== */
 
 /* ====================================
